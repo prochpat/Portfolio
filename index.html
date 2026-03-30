@@ -136,15 +136,18 @@
         }
 
         /* Responzivita pro mobilní telefony */
+        /* Responzivita pro mobilní telefony */
         @media (max-width: 768px) {
-            header {
+            .header-content {
                 flex-direction: column;
-                gap: 5px;
-                padding: 20px 5%;
+                gap: 15px;
+                padding: 20px 5%; /* Těchto 5 % zajistí, že to nebude nalepené na okraji */
             }
             
             nav ul {
                 gap: 20px;
+                flex-wrap: wrap; /* Zalomí text na další řádek, pokud by byl displej moc úzký */
+                justify-content: center;
             }
 
             .photo-grid {
