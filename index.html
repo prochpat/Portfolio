@@ -100,67 +100,37 @@
             margin-bottom: 60px; /* Větší mezera pod touto sekcí */
         }
 
-        /* --- SEKCE 2: Alba (proklikávací) --- */
-        .albums-section {
-            border-top: 1px solid #eee; /* Jemná dělící čára */
-            padding-top: 50px;
-        }
+       
 
-        .section-title {
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
-
-        .album {
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .album:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Alba mají větší mezery */
-        .albums-section .photo-grid {
-            gap: 40px; 
-        }
-
-        .album-title {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            font-weight: normal;
-        }
-
+        /* Responzivita pro mobilní telefony */
         /* Responzivita pro mobilní telefony */
         /* Responzivita pro mobilní telefony */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 15px;
-                padding: 20px 5%; /* Těchto 5 % zajistí, že to nebude nalepené na okraji */
+                padding: 20px 5%;
             }
             
             nav ul {
                 gap: 10px;
-                flex-wrap: wrap; /* Zalomí text na další řádek, pokud by byl displej moc úzký */
+                flex-wrap: wrap;
                 justify-content: center;
             }
 
+            /* --- OPRAVENÁ MŘÍŽKA PRO MOBIL --- */
             .photo-grid {
-                grid-template-columns: 1fr; /* Na mobilu vše pod sebou */
-                gap: 10px !important;
+                column-count: 1; /* Správný příkaz pro jeden sloupec */
+                column-gap: 0;
+            }
+            
+            .album, .image-placeholder {
+                margin-bottom: 10px; /* Toto teď dělá tu 10px mezeru mezi fotkami pod sebou */
             }
             
             .intro-photos {
                 margin-bottom: 40px;
             }
-
-            
         }
     </style>
 </head>
