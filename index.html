@@ -76,9 +76,10 @@
 
         /* Obal pro fotku nebo album */
         .album, .image-placeholder {
-            break-inside: avoid; /* Zabrání tomu, aby se fotka "roztrhla" mezi dva sloupce */
-            margin-bottom: 20px; /* Mezera pod každou fotkou */
-            display: block;
+            break-inside: avoid; 
+            margin-bottom: 20px; 
+            display: inline-block; /* ZMĚNA: místo block dáme inline-block */
+            width: 100%;           /* ZMĚNA: donutíme fotku vyplnit 100 % šířky sloupce */
         }
 
         .image-placeholder {
