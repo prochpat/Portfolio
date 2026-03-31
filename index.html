@@ -68,29 +68,30 @@
             margin: 0 auto;
         }
 
-        /* Společné nastavení pro mřížky (gridy) */
+        /* Společné nastavení pro Masonry mřížku (styl Pinterest) */
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Tři sloupce */
-            gap: 20px; /* Menší mezera pro fotky */
+            column-count: 3; /* Počet sloupců */
+            column-gap: 20px; /* Mezera mezi sloupci */
         }
 
-        /* Společný styl pro zástupný blok fotky */
+        /* Obal pro fotku nebo album */
+        .album, .image-placeholder {
+            break-inside: avoid; /* Zabrání tomu, aby se fotka "roztrhla" mezi dva sloupce */
+            margin-bottom: 20px; /* Mezera pod každou fotkou */
+            display: block;
+        }
+
         .image-placeholder {
             width: 100%;
-            aspect-ratio: 3 / 2; /* Klasický poměr stran fotky */
-            background-color: #f4f4f4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: #f4f4f4; /* Zůstane šedé pozadí, dokud se fotka nenačte */
             color: #888;
-            overflow: hidden;
         }
 
+        /* Samotná fotka si teď určí svou výšku sama */
         .image-placeholder img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto; /* DŮLEŽITÉ: Fotka si zachová svůj originální poměr stran */
+            display: block;
         }
 
         /* --- SEKCE 1: Úvodní statické fotky --- */
@@ -182,16 +183,121 @@
             <div class="photo-grid">
                 
                 <div class="image-placeholder">
-                    <span>Úvodní fotka 1</span>
+                    <img src="kostel.jpg" alt="kostel">
                 </div>
 
                 <div class="image-placeholder">
-                    <span>Úvodní fotka 2</span>
+                    <img src="ostrov.jpg" alt="ostrov">
                 </div>
 
                 <div class="image-placeholder">
-                    <span>Úvodní fotka 3</span>
+                    <img src="namesti.jpg" alt="namesti">
                 </div>
+
+                <div class="image-placeholder">
+                    <img src="praha.jpg" alt="praha">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="dum_rim.jpg" alt="dum v rime">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="komin.jpg" alt="komin">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="typek_na_lodi.jpg" alt="typek na lodi">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="auto_2.jpg" alt="auto2">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="akaba.jpg" alt="akaba">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="auto_1.jpg" alt="auto 1">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="auto_3.jpg" alt="auto 3">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="bubenik.jpg" alt="bubenik">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="jidlo.jpg" alt="jidlo">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="les.jpg" alt="les">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="letadla.jpg" alt="letadla">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="lidi.jpg" alt="lidi">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="lod.jpg" alt="lod">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="lode.jpg" alt="lode">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="majak.jpg" alt="majak">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="mrtve_more.jpg" alt="mrtve more">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="namesti.jpg" alt="namesti">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="petra.jpg" alt="petra">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="rakousko.jpg" alt="rakousko">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="rim_ulicka.jpg" alt="rim ulicka">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="strom.jpg" alt="strom">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="sunset.jpg" alt="sunset">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="typek.jpg" alt="typek">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="velbloud.jpg" alt="velbloud">
+                </div>
+
+                <div class="image-placeholder">
+                    <img src="zpevak.jpg" alt="zpevak">
+                </div>
+                
 
             </div>
         </section>
