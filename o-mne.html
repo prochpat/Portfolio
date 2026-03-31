@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mně - Patrik Procházka</title>
+    <style>
+        /* Tady je tvůj původní základní kód z indexu */
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff; color: #000000; line-height: 1.6; }
+        a { text-decoration: none; color: #000000; }
+        header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 40px; }
+        nav ul li a { font-size: 1rem; transition: color 0.3s ease; }
+        nav ul li a:hover { text-decoration: underline; }
+        main { padding: 0 5% 50px 5%; max-width: 1200px; margin: 0 auto; }
+
+        /* --- NOVÝ STYL PRO SEKCI O MNĚ --- */
+        .about-section {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+            align-items: center; /* Zarovná text a fotku na střed na výšku */
+        }
+        
+        .about-image {
+            flex: 1; /* Zabere polovinu místa */
+        }
+        
+        .about-image img {
+            width: 70%; /* ZDE si můžeš pohrát s procenty. Čím menší číslo, tím menší fotka. */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Tímto příkazem fotku vycentruješ */
+        }
+
+        .about-text {
+            flex: 1; /* Zabere druhou polovinu místa */
+            font-size: 1.1rem;
+        }
+
+        .about-text h1 {
+            font-size: 2rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responzivita pro mobilní telefony */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 15px; padding: 20px 5%; }
+            nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            
+            /* Na mobilu dáme fotku a text pod sebe */
+            .about-section {
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">Patrik Procházka</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="o-mne.html">O mně</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-image">
+                <img src="profilovka_.jpg" alt="Patrik Procházka">
+            </div>
+            <div class="about-text">
+                <h1>TĚŠÍ MĚ</h1>
+                <p>Ahoj, já jsem Patrik! Jsem student a fotograf. Od malička rád zachycuju okamžiky a příběhy, ať už skrze fotky, nebo filmy.</p>
+                <p>Focení miluju, ale není to, a pravděpodobně nikdy nebude, moje hlavní kariéra. Já to tak ani nechci. Nejvíc mě to naplňuje, když to dělám pro sebe. Pokud fotím něco i pro někoho jiného, tak to je proto, že zrovna opravdu chci.</p>
+                <p>Každý pes, jiná ves. Tak bych popsal svůj styl. Fotím všechno a všude. Z mého portfolia jako celku je ale poznat, že mám rád barvy, kontrast a jednoduché kompozice.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

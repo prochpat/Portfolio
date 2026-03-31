@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Patrik Procházka</title>
+    <style>
+        /* Tady je opět tvůj původní základní kód */
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff; color: #000000; line-height: 1.6; }
+        a { text-decoration: none; color: #000000; }
+        header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 40px; }
+        nav ul li a { font-size: 1rem; transition: color 0.3s ease; }
+        nav ul li a:hover { text-decoration: underline; }
+        main { padding: 0 5% 50px 5%; max-width: 1200px; margin: 0 auto; }
+
+        /* --- NOVÝ STYL PRO KONTAKT --- */
+        .contact-section {
+            text-align: center;
+            margin-top: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-section h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-item a {
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: #555;
+        }
+
+        .social-links {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-links a {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responzivita pro mobilní telefony */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 15px; padding: 20px 5%; }
+            nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .contact-section { margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">Patrik Procházka</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="o-mne.html">O mně</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>E-MAIL</h1>
+            <div class="contact-item">
+                <a href="mailto:foto@patrikproch.cz">foto@patrikproch.cz</a>
+            </div>
+            
+            
+            <h2>INSTAGRAM</h2>
+            <div class="social-links">
+                <a href="#" target="_blank">@patrik.proch</a>
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
