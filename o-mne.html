@@ -6,13 +6,18 @@
     <title>O mně - Patrik Procházka</title>
     <style>
         /* Tady je tvůj původní základní kód z indexu */
-        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff; color: #000000; line-height: 1.6; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff; color: #000000; line-height: 1.6; min-width: 320px;}
         a { text-decoration: none; color: #000000; }
         header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); z-index: 1000; }
         .header-content { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
         .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 40px; }
         nav ul li a { font-size: 1.1rem; transition: color 0.3s ease; }
+        /* Zvýraznění aktivní stránky */
+        nav ul li a.active {
+            
+            font-weight: 1000;
+        }
         nav ul li a:hover { text-decoration: underline; }
         main { padding: 0 5% 50px 5%; max-width: 1200px; margin: 0 auto; }
 
@@ -69,7 +74,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Portfolio</a></li>
-                    <li><a href="o-mne.html">O mně</a></li>
+                    <li><a href="o-mne.html" class="active">O mně</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
